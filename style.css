@@ -1,156 +1,154 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-body{
+body {
     background-color: rgb(93, 88, 85);
-    color:white;
+    color: white;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#container{
+#container {
     display: flex;
     flex-direction: column;
-    gap: 0.7rem;
-    background-color: rgb(0, 0, 0);
+    gap: 1rem;
+    background-color: black;
     padding: 20px;
-    width: 600px;
-    box-shadow: 2px 2px 20px rgb(0, 0, 0);
+    width: 650px; /* Slightly increased width */
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
-#top{
+#top {
     display: flex;
-    justify-content:center;
-}
-h1{
-    font-size: 3rem;
+    justify-content: center;
 }
 
-#user{
+h1 {
+    font-size: 3.2rem; /* Slightly larger font */
+}
+
+#user {
     display: flex;
     flex-direction: column;
-    gap: 7px;
-    justify-content: start;
+    gap: 10px;
 }
 
-#userField{
+#userField {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
-#userInput{
-    padding: 0.2 rem;
-    width: 80%;
-}
-
-#search{
+#userInput {
     padding: 0.4rem;
+    width: 80%;
+    border: 1px solid #555;
     border-radius: 5px;
-    background-color: red;
-    border: 1px groove red;
+}
+
+#search {
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    background-color: #ff4500; /* Changed to a bright color for the button */
+    border: none;
     color: white;
+    cursor: pointer;
     transition: transform 0.3s ease;
 }
-#search:hover{
-    /* border: 1px groove white; */
-    transform: scale(1.05);
+
+#search:hover {
+    transform: scale(1.08);
 }
 
-#progress{
+#progress {
     padding: 2rem;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.circle{
+.circle {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
-    width: 100px;
-    border: 1px groove rgb(255, 169, 10);
+    height: 120px; /* Increased circle size */
+    width: 120px; /* Increased circle size */
+    border: 2px solid #ff4500; /* Changed border color to match button */
     border-radius: 50%;
-    /* background-color: rgb(57, 125, 71); */
-    background: conic-gradient(rgb(0, 0, 0) var(--progress-degree, 40%), rgb(255, 0, 0) 1%);
+    background: conic-gradient(#000 var(--progress-degree, 40%), #ff4500 1%); /* Adjust gradient color */
+    color: #fff;
+    font-weight: bold;
 }
 
-.solved{
-    height: 100px;
-    width: 100px;
-    border: 2px groove rgb(255, 169, 10);
-    background-color: rgb(255, 0, 0);
+.solved {
+    height: 110px; /* Increased size for cards */
+    width: 110px;
+    border: 2px solid #ff4500;
+    background-color: #ff4500;
     display: flex;
     flex-direction: column;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: center;
     border-radius: 12px;
+    color: white;
 }
 
-#cards{
+#cards {
     display: none;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding: 0rem 2rem;
+    padding: 1rem 2rem;
 }
 
-#easy1{ background-color: rgb(16, 193, 0); }
-#med1{ background-color: rgb(255, 115, 0); }
-#hard1{ background-color: rgb(255, 0, 0); }
+#easy1 { background-color: #28a745; } /* Green for easy */
+#med1 { background-color: #ffc107; } /* Yellow for medium */
+#hard1 { background-color: #dc3545; } /* Red for hard */
 
 .detail {
     display: none;
     justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 2rem 1rem 1rem 1rem;
+    padding: 1.5rem 1rem;
 }
 
-#total {
-    height: 2rem;
+#total, #rank {
+    height: 2.2rem;
     width: 15rem;
-    border: 2px groove rgb(255, 169, 10);
-    display: flex;
-    background-color: red;
-    border-radius: 12px;
-    align-items: center;
-    justify-content: center;
-}
-
-#rank {
-    height: 2rem;
-    width: 15rem;
-    border: 2px groove rgb(255, 169, 10);
-    background-color: red;
+    border: 2px solid #ff4500;
+    background-color: #333; /* A darker background to stand out */
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-#myLink{ 
-    display: none; 
-    justify-content: center;
-    align-items: center;
-    height: 2rem;
-    width: 6rem;
-    border: 2px groove rgb(255, 169, 10);
-    border-radius: 3px;;
     color: white;
-    background-color: red;
-    text-decoration: none;
 }
-.idd{
+
+#myLink {
     display: flex;
-    justify-content: space-around;
-    padding: 1rem 0rem;
+    justify-content: center;
+    align-items: center;
+    height: 2.2rem;
+    width: 6rem;
+    border: 2px solid #ff4500;
+    background-color: #ff4500;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
     transition: transform 0.3s ease;
 }
 
-.idd:hover{
-    transform: scale(1.05);
+#myLink:hover {
+    transform: scale(1.1);
+}
+
+.idd {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
 }
